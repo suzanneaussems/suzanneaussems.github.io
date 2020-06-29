@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>publications.utf8</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 52px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h2 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h3 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h4 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h5 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.section h6 {
+  padding-top: 57px;
+  margin-top: -57px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="research.html">Research</a>
+</li>
+<li>
+  <a href="publications.html">Publications</a>
+</li>
+<li>
+  <a href="cv.html">CV</a>
+</li>
+<li>
+  <a href="lab.html">Lab</a>
+</li>
+<li>
+  <a href="teaching.html">Teaching</a>
+</li>
+<li>
+  <a href="testimonials.html">Testimonials</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="mailto:s.aussems.1@warwick.ac.uk">
+    <span class="fa fa-envelope"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/SuzanneAussems">
+    <span class="fa fa-twitter-square"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/suzanne-aussems-a23a5019/">
+    <span class="fa fa-linkedin"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://scholar.google.co.uk/citations?user=IyhlQjUAAAAJ&amp;hl=en">
+    <span class="fa fa-graduation-cap"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br> <br> <br></p>
+<p style="font-size:24px">
+<b>Peer-reviewed scientific journals</b>
+</p>
+<p class="hangingindent">
+<b>Aussems, S.</b>, &amp; Kita, S. (in press). Seeing iconic gesture promotes first- and second-order verb generalization in preschoolers. <i>Child Development</i>.
+</p>
+<p class="hangingindent">
+<b>Aussems, S.</b> (2019). <a href="https://www.tandfonline.com/doi/abs/10.1080/10489223.2019.1624759">How seeing iconic gestures facilitates action event memory and verb learning in 3-year-old children</a>. <i>Language Acquisition, 27</i>(1), 68-70. doi: 10.1080/10489223.2019.1624759
+</p>
+<p class="hangingindent">
+<b>Aussems, S.</b>, &amp; Vogt., P. (2018). <a href="https://ieeexplore.ieee.org/document/8464247/authors#authors">Adults use distributional statistics for word learning in a conservative way</a>. <i>IEEE Transactions on Cognitive and Developmental Systems, 12</i>(2), 232-242. doi: 10.1109/TCDS.2018.2870161
+</p>
+<p class="hangingindent">
+<b>Aussems, S.</b>, &amp; Kita, S. (2018). <a href="https://srcd.onlinelibrary.wiley.com/doi/abs/10.1111/cdev.12988">Seeing iconic gestures with action events facilitates children’s memory of these events</a>. <i>Child Development, 90</i>(4), 1123-1137. doi: 10.1111/cdev.12988
+</p>
+<p class="hangingindent">
+<b>Aussems, S.</b>, Kwok, N., &amp; Kita, S. (2017). <a href="https://link.springer.com/article/10.3758/s13428-017-0942-2">GestuRe and ACtion Exemplar (GRACE) video database: Stimuli for research on manners of human locomotion and iconic gestures</a>. <i>Behavior Research Methods, 50</i>(3), 1270-1284. doi: 10.3758/s13428-017-0942-2
+</p>
+<p class="hangingindent">
+Vogt, P., Mastin, J. D., &amp; <b>Aussems, S.</b> (2015). <a href="https://www.hindawi.com/journals/cdr/2015/189195/">Early vocabulary development in rural and urban Mozambique</a>. <i>Child Development Research</i>, vol. 2015, Article ID 189195, 15 pages. doi: 10.1155/2015/189195
+</p>
+<p style="font-size:24px">
+<b>Peer-reviewed conference proceedings</b>
+</p>
+<p class="hangingindent">
+<b>Aussems, S.</b>, &amp; Kita, S. (2019). Seeing iconic gesture promotes first- and second-order verb generalization in pre-schoolers. <i>In proceedings of the Child Language Symposium (CLShef19)</i>, University of Sheffield, UK.
+</p>
+<p class="hangingindent">
+<b>Aussems, S.</b>, &amp; Kita, S. (2019). Seeing iconic gesture promotes second-order verb generalization in pre-schoolers. <i>In proceedings of the Budapest CEU Conference on Cognitive Development (BCCCD)</i>, Central European University, Budapest, Hungary.
+</p>
+<p class="hangingindent">
+<b>Aussems, S.</b>, &amp; Kita, S. (2018). Seeing iconic gestures promotes lasting word-category knowledge about verbs in children. <i>In proceedings the 8th conference of the International Society of Gesture Studies (ISGS8)</i>, Cape Town, South Africa.
+</p>
+<p class="hangingindent">
+Kita, S., <b>Aussems, S.</b>, &amp; Mumford, K. (2018). Seeing iconic gestures helps three-year-olds learn verbs. <i>In proceedings of the 8th conference of the International Society of Gesture Studies (ISGS8)</i>, Cape Town, South Africa.
+</p>
+<p class="hangingindent">
+<b>Aussems, S.</b>, &amp; Kita, S. Who did what? How iconic gestures help young children to encode action events. <i>In proceedings of the “Iconicity Focus Group Workshop”</i>, Centre for Language Studies &amp; Max Planck Institute for Psycholinguistics Workshop, Nijmegen, The Netherlands.
+</p>
+<p class="hangingindent">
+<b>Aussems, S.</b>, Mumford, K., &amp; Kita, S. (2017). Prior experience with actions that were highlighted by iconic gestures facilitates verb learning in three-year-olds. <i>In proceedings of the 14th International Congress for the Study of Child Language (IASCL)</i>, Université Lyon, France.
+</p>
+<p class="hangingindent">
+<b>Aussems, S.</b>, Mumford, K. H., &amp; Kita, S. (2017). Seeing iconic gestures helps 3-year-olds link multiple exemplars for verb learning. <i>In proceedings of the International Conference on Gesture and Multimodality (iGesto’17)</i>, University of Porto, Portugal.
+<p>
+<p class="hangingindent">
+<b>Aussems, S.</b>, &amp; Kita, S. (2016). How iconic hand gestures can change children’s memory representation of action events. <i>In proceedings of the 7th conference of the International Society of Gesture Studies (ISGS7)</i>, Paris, France.
+</p>
+<p class="hangingindent">
+<b>Aussems, S.</b>, Chu, M., Kita, S., &amp; van Zaanen, M. (2015). Applying pattern-based classification to sequences of gestures. <i>In Noelle, D. C., Dale, R., Warlaumont, A. S., Yoshimi, J., Matlock, T., Jennings, C. D., &amp; Maglio, P. P. (Eds.), proceedings of the 37th annual meeting of the Cognitive Science Society</i> (pp. 124-129). Austin, TX: Cognitive Science Society.
+</p>
+<p class="hangingindent">
+<b>Aussems, S.</b>, &amp; Vogt, P. (2015). Adults track multiple hypotheses simultaneously during word learning. <i>In Noelle, D. C., Dale, R., Warlaumont, A. S., Yoshimi, J., Matlock, T., Jennings, C. D., &amp; Maglio, P. P. (Eds.), proceedings of the 37th annual meeting of the Cognitive Science Society</i>(pp. 118-123). Austin, TX: Cognitive Science Society.
+</p>
+<p class="hangingindent">
+van Zaanen, M., van Huyssteen, G., <b>Aussems, S.</b>, Emmery, C., &amp; Eiselen, R. (2014). The development of Dutch and Afrikaans language resources for compound boundary analysis. <i>In N. Calzolari et al. (Eds.), proceedings of the 9th international conference on Language Resources and Evaluation (LREC)</i> (pp. 1056-1062). Reykjavik, Iceland.
+</p>
+<p class="hangingindent">
+<b>Aussems, S.</b>, &amp; Vogt, P. (2013). Exploring cross-situational learning and mutual exclusivity. <i> In M. Knauff, M. Pauen, N. Sebanz, &amp; I. Wachsmuth (Eds.), proceedings of the 35th annual conference of the Cognitive Science Society</i> (p. 3874). Austin, TX: Cognitive Science Society.
+</p>
+<p class="hangingindent">
+<b>Aussems, S.</b>, Goris, B., Lichtenberg, V., van Noord, N., Smetsers, R., &amp; van Zaanen, M. (2013). Unsupervised identification of compounds. <i>In proceedings of the 22nd annual Belgian-Dutch conference on machine learning (BENELEARN)</i> (pp. 18-25). Nijmegen, The Netherlands.
+</p>
+<p class="hangingindent">
+<b>Aussems, S.</b>, Bruys, S., Goris, B., Lichtenberg, V., van Noord, N., Smetsers, R., &amp; van Zaanen, M. (2013). Automatically identifying compounds. <i>In book of abstracts of the 23rd meeting of Computational Linguistics in the Netherlands (CLIN)</i> (p. 10). Enschede, The Netherlands.
+</p>
+<p style="font-size:24px">
+<b>Blog posts</b>
+</p>
+<p>Ricketts, J., &amp; <b>Aussems, S.</b> (2020). <a href="https://www.tes.com/news/what-eyfs-teachers-need-know-about-shared-reading">What EYFS teachers need to know about shared reading</a>. <i>TES website</i>.</p>
+<p><b>Aussems, S.</b> (2018). <a href="http://icog.group.shef.ac.uk/what-hand-gestures-tell-us-about-the-evolution-of-language/">What hand gestures tell us about the evolution of language</a>. <i>iCog website</i>.</p>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

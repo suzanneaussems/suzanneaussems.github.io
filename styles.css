@@ -1,0 +1,23 @@
+.hangingindent {
+  padding-left: 22px ;
+  text-indent: -22px ;
+}
+.column_right {
+  float: right;
+  width: 60%;
+}
+.column_left {
+  float: left;
+  width: 40%;
+}
+img {
+  border-radius: 50%;
+}
+.cv_right {
+  float: right;
+  width: 40%;
+}
+.cv_left {
+  float: left;
+  width: 60%;
+}
