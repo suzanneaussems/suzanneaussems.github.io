@@ -1,0 +1,24 @@
+---
+title: ""
+output: html_document
+---
+
+<br>
+<br>
+<br>
+
+<p style="font-size:24px"><b>Modules</b></p>
+
+PS218: Developmental Psychology (undergraduate)
+<br>
+PS907: Advanced Research Methods (postgraduate)
+
+<p style="font-size:24px"><b>Project students</b></p>
+
+<p style="font-size:18px"><b>Undergraduate research projects</b></p>
+I am currently supervisor to 8 final-year undergraduate project students and 20 second-year undergraduate project students (academic year 2020-2021).
+
+<p style="font-size:18px"><b>Placements</b></p>
+I am currently supervisor to two MSc placement students (academic year 2020-2021).
+<br>
+I am keen to host excellent students during a placement with me in the developmental research lab at the University of Warwick. In the past, I have supervised placement students via the Erasmus bursary scheme. Please get in touch via email if you would like to do a placement with me.
