@@ -11,26 +11,40 @@
 
 
 
-<title>research.utf8</title>
+<title>research.knit</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
-<style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -43,32 +57,7 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
@@ -79,10 +68,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -99,40 +84,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 52px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h2 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h3 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h4 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h5 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
-.section h6 {
-  padding-top: 57px;
-  margin-top: -57px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -160,7 +118,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -172,7 +130,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -183,10 +141,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -198,7 +169,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -305,13 +275,13 @@ $(document).ready(function () {
 </li>
 <li>
   <a href="https://twitter.com/SuzanneAussems">
-    <span class="fab fa fab fa-twitter"></span>
+    <span class="fab fa-twitter"></span>
      
   </a>
 </li>
 <li>
   <a href="https://www.linkedin.com/in/suzanne-aussems-a23a5019/">
-    <span class="fab fa fab fa-linkedin-in"></span>
+    <span class="fab fa-linkedin-in"></span>
      
   </a>
 </li>
@@ -326,7 +296,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -341,15 +311,56 @@ $(document).ready(function () {
 <p style="font-size:18px">
 <b>Word learning</b>
 </p>
-<p>I study a variety of learning strategies that young children and adults use to acquire words and build on their vocabulary. These strategies involve statistical learning mechanisms that help them to cope with visual input, and following social cues such as gestures to determine the correct referent of a novel word. Through experimental studies with infants, preschoolers, and adults I aim to provide insight in how such language strategies may complement each other. Using implicit measures such as eye gaze, I investigate language learning even in younger infants. The goal of my research is to identify the (nonverbal) factors that facilitate word learning in children between 0-4 years of age, and use this knowledge to develop a better understanding of word learning mechanisms in general. Ultimately, I aim to develop interventions that can boost children’s vocabulary development and language skills in the early years, preparing them for school entry, and minimizing the risk of them falling behind at a later age.</p>
+<p>I study a variety of learning strategies that young children and
+adults use to acquire words and build on their vocabulary. These
+strategies involve statistical learning mechanisms that help them to
+cope with visual input, and following social cues such as gestures to
+determine the correct referent of a novel word. Through experimental
+studies with infants, preschoolers, and adults I aim to provide insight
+in how such language strategies may complement each other. Using
+implicit measures such as eye gaze, I investigate language learning even
+in younger infants. The goal of my research is to identify the
+(nonverbal) factors that facilitate word learning in children between
+0-4 years of age, and use this knowledge to develop a better
+understanding of word learning mechanisms in general. Ultimately, I aim
+to develop interventions that can boost children’s vocabulary
+development and language skills in the early years, preparing them for
+school entry, and minimizing the risk of them falling behind at a later
+age.</p>
 <p style="font-size:18px">
 <b>Gesture</b>
 </p>
-<p>I am interested in the iconic co-speech gestures that adults produce, and how these gestures can help children solve difficult tasks. Through experimental research, I investigate the mechanisms that underlie the beneficial effects of seeing iconic gestures on 3-4-year-old children’s performance in memory- and language-related tasks. I also study pointing gestures in pre-verbal infants and preschool-aged children. For example, I investigate how infants use pointing and eye gaze to communicate their desire to an adult communication partner, and how infants’ nonverbal behaviour may reveal what they know about their communication partner’s knowledge states. In the preschool years, I look at how children produce pointing gestures in two-alternative forced choice word learning tasks and what these gestures can tell us about the strategy that children employ to solve the task, and how confident they are about their answers.</p>
+<p>I am interested in the iconic co-speech gestures that adults produce,
+and how these gestures can help children solve difficult tasks. Through
+experimental research, I investigate the mechanisms that underlie the
+beneficial effects of seeing iconic gestures on 3-4-year-old children’s
+performance in memory- and language-related tasks. I also study pointing
+gestures in pre-verbal infants and preschool-aged children. For example,
+I investigate how infants use pointing and eye gaze to communicate their
+desire to an adult communication partner, and how infants’ nonverbal
+behaviour may reveal what they know about their communication partner’s
+knowledge states. In the preschool years, I look at how children produce
+pointing gestures in two-alternative forced choice word learning tasks
+and what these gestures can tell us about the strategy that children
+employ to solve the task, and how confident they are about their
+answers.</p>
 <p style="font-size:18px">
 <b>Evolution of communication</b>
 </p>
-<p>I have completed an ESRC-funded research project titled “the role of gesture in language development and evolution”. One fascinating question I often think about is how human communication evolved? Language is a uniquely human communication system which has not evolved in any other species. However, language is just one part of the story; we also communicate nonverbally using our body language and gestures. Remarkably, our closest evolutionary relatives, great apes, gesture flexibly too despite not having a language system. I believe that gesture plays a significant role in the story of how human communication developed and evolved over time. In my future research, I would like to further investigate this topic by analyzing the gestural communication system of humans and chimpanzees. By systematically comparing the gestures of humans and great apes I aim to better understand their role in communication development and evolution.</p>
+<p>I have completed an ESRC-funded research project titled “the role of
+gesture in language development and evolution”. One fascinating question
+I often think about is how human communication evolved? Language is a
+uniquely human communication system which has not evolved in any other
+species. However, language is just one part of the story; we also
+communicate nonverbally using our body language and gestures.
+Remarkably, our closest evolutionary relatives, great apes, gesture
+flexibly too despite not having a language system. I believe that
+gesture plays a significant role in the story of how human communication
+developed and evolved over time. In my future research, I would like to
+further investigate this topic by analyzing the gestural communication
+system of humans and chimpanzees. By systematically comparing the
+gestures of humans and great apes I aim to better understand their role
+in communication development and evolution.</p>
 
 
 
@@ -360,7 +371,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -378,7 +389,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
