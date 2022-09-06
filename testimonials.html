@@ -13,7 +13,7 @@
 
 <title>testimonials.knit</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
@@ -59,6 +59,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -83,6 +84,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -140,11 +144,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -235,7 +243,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -360,6 +368,28 @@ is a fountain of knowledge. She will go the extra mile to help you and
 make sure you develop to the best of your abilities.</p>
 <p>I hope to continue working with Suzanne as I develop my career, and
 publish research together in the future!”</p>
+<p style="font-size:18px">
+<b>Ms. Rebecca Morris</b>
+</p>
+<p>“I have worked with Suzanne as a summer placement student in 2022. My
+main task involved upkeep of the family database used to securely store
+child participant information, by contacting parents to update
+information and removing participants from the database who were not
+able to be contacted or had requested to be removed. I also worked on
+recruitment of new participants using social media, such as Facebook,
+and added these new sign-ups to the database. Over the placement, I was
+taught how to code infant vocalisations using the software ELAN. Suzanne
+also taught me new ways to use SPSS, such as for calculating inter-rater
+reliability. I also met with a PhD student to voice record stimuli to be
+used in their research project.</p>
+<p>Suzanne has been extremely welcoming and engaging throughout the
+placement and has helped me to gain new skills that will be useful
+throughout my further education and future jobs. She is evidently
+passionate about the research area and learning from Suzanne has been
+thoroughly enjoyable. I am very grateful to have been given this summer
+placement and appreciate all that Suzanne has helped me with. It has
+been a privilege to spend my summer on this placement, before continuing
+with my studies.”</p>
 <p style="font-size:24px">
 <b>Research Assistants</b>
 </p>
