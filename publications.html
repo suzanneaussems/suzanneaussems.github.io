@@ -13,7 +13,7 @@
 
 <title>publications.knit</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
@@ -59,6 +59,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -83,6 +84,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -140,11 +144,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -235,7 +243,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -388,79 +396,6 @@ Development Research</i>, vol. 2015, Article ID 189195, 15 pages. doi:
 </p>
 <p style="font-size:24px">
 <b>Peer-reviewed conference proceedings</b>
-</p>
-<p class="hangingindent">
-<b>Aussems, S.</b>, &amp; Kita, S. (2022). Audience effects on infants’
-imperative pointing gestures. <i>In proceedings of the 9th conference of
-the International Society of Gesture Studies (ISGS9)</i>, Chicago, USA.
-</p>
-<p class="hangingindent">
-<b>Aussems, S.</b>, &amp; Kita, S. (2022). A coding manual for infants’
-nonverbal behaviors during looking time experiments. <i>In proceedings
-of the 9th conference of the International Society of Gesture Studies
-(ISGS9)</i>, Chicago, USA.
-</p>
-Zuniga-Montanez, C., Kita, S.,
-<p class="hangingindent">
-<b>Aussems, S.</b>, &amp; Krott, A. (2020). Training infants to focus on
-the function of objects facilitates word learning. <i>In proceedings of
-the Virtual Meeting of the International Congress of Infant Studies.</i>
-</p>
-<p class="hangingindent">
-<b>Aussems, S.</b>, Mumford, K. H. &amp; Kita, S. (2020). Seeing iconic
-gestures with unlabelled action exemplars facilitates children’s verb
-learning. <i>In proceedings of the Virtual Meeting of the Experimental
-Psychology Society.</i>
-</p>
-<p class="hangingindent">
-<b>Aussems, S.</b>, &amp; Kita, S. (2019). Seeing iconic gesture
-promotes first- and second-order verb generalization in pre-schoolers.
-<i>In proceedings of the Child Language Symposium (CLShef19)</i>,
-University of Sheffield, UK.
-</p>
-<p class="hangingindent">
-<b>Aussems, S.</b>, &amp; Kita, S. (2019). Seeing iconic gesture
-promotes second-order verb generalization in pre-schoolers. <i>In
-proceedings of the Budapest CEU Conference on Cognitive Development
-(BCCCD)</i>, Central European University, Budapest, Hungary.
-</p>
-<p class="hangingindent">
-<b>Aussems, S.</b>, &amp; Kita, S. (2018). Seeing iconic gestures
-promotes lasting word-category knowledge about verbs in children. <i>In
-proceedings the 8th conference of the International Society of Gesture
-Studies (ISGS8)</i>, Cape Town, South Africa.
-</p>
-<p class="hangingindent">
-Kita, S., <b>Aussems, S.</b>, &amp; Mumford, K. (2018). Seeing iconic
-gestures helps three-year-olds learn verbs. <i>In proceedings of the 8th
-conference of the International Society of Gesture Studies (ISGS8)</i>,
-Cape Town, South Africa.
-</p>
-<p class="hangingindent">
-<b>Aussems, S.</b>, &amp; Kita, S. Who did what? How iconic gestures
-help young children to encode action events. <i>In proceedings of the
-“Iconicity Focus Group Workshop”</i>, Centre for Language Studies &amp;
-Max Planck Institute for Psycholinguistics Workshop, Nijmegen, The
-Netherlands.
-</p>
-<p class="hangingindent">
-<b>Aussems, S.</b>, Mumford, K., &amp; Kita, S. (2017). Prior experience
-with actions that were highlighted by iconic gestures facilitates verb
-learning in three-year-olds. <i>In proceedings of the 14th International
-Congress for the Study of Child Language (IASCL)</i>, Université Lyon,
-France.
-</p>
-<p class="hangingindent">
-<b>Aussems, S.</b>, Mumford, K. H., &amp; Kita, S. (2017). Seeing iconic
-gestures helps 3-year-olds link multiple exemplars for verb learning.
-<i>In proceedings of the International Conference on Gesture and
-Multimodality (iGesto’17)</i>, University of Porto, Portugal.
-<p>
-<p class="hangingindent">
-<b>Aussems, S.</b>, &amp; Kita, S. (2016). How iconic hand gestures can
-change children’s memory representation of action events. <i>In
-proceedings of the 7th conference of the International Society of
-Gesture Studies (ISGS7)</i>, Paris, France.
 </p>
 <p class="hangingindent">
 <b>Aussems, S.</b>, Chu, M., Kita, S., &amp; van Zaanen, M. (2015).
