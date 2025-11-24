@@ -16,7 +16,7 @@
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -30,10 +30,10 @@
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -255,9 +255,6 @@ $(document).ready(function () {
   <a href="publications.html">Publications</a>
 </li>
 <li>
-  <a href="cv.html">CV</a>
-</li>
-<li>
   <a href="lab.html">Lab</a>
 </li>
 <li>
@@ -271,6 +268,12 @@ $(document).ready(function () {
         <li>
   <a href="mailto:s.aussems.1@warwick.ac.uk">
     <span class="fa fa-envelope"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://bsky.app/profile/suzanneaussems.bsky.social">
+    <span class="fa fa-brands fa-bluesky"></span>
      
   </a>
 </li>
@@ -305,36 +308,82 @@ $(document).ready(function () {
 </div>
 
 
-<p><br> <br> <br></p>
-<div class="column_left">
-<p><img src="images/suzanne_recent.jpg" alt="drawing" width="270px"/></p>
+<style>
+
+/* GLOBAL FONT STYLE: academic serif */
+body {
+  font-family: "Georgia", "Garamond", "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Layout container */
+.profile-container {
+  display: flex;
+  align-items: flex-start;   /* <<< ensures the top of the image aligns with the top of the text */
+  gap: 55px;
+  margin-top: 40px;
+}
+
+/* Larger profile image with professional styling */
+.profile-image img {
+  width: 380px; /* <<< increased image size */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+
+/* Section headers */
+.section-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #1f2d3d;
+  letter-spacing: 0.5px;
+}
+
+/* Contact box styling */
+.contact-box {
+  margin-top: 35px;
+  padding: 18px 24px;
+  background: #f7f9fc;
+  border-left: 5px solid #4e79a7;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+</style>
+<div class="profile-container">
+<div style="text-align:left; margin:120px 0;">
+<p><img src="images/suzanne2.jpg" alt="Dr Suzanne Aussems" style="width:680px; height:auto;" /></p>
 </div>
-<div class="column_right">
-<p style="font-size:24px">
-<b>Biography</b>
-</p>
-Dr Suzanne Aussems has been an Assistant Professor in Psychology at the
-University of Warwick since July 2020. She obtained BA (2007-2010) and
-MA degrees (2010-2012) in Culture Studies from Tilburg University, as
-well as a joint MPhil degree in Language and Communication (2012-2014)
-from Tilburg University and Radboud University Nijmegen, in the
-Netherlands. She obtained a PhD degree in Psychology from the University
-of Warwick (2014-2017), in the United Kingdom. After completing her PhD,
-she held two postdoctoral fellowships at the University of Warwick
-(2017-2019) and worked as postdoctoral researcher in developmental
-psychology at Royal Holloway University of London (2019-2020). <br> <br>
-<p style="font-size:24px">
-<b>Contact</b>
-</p>
-<p><b>Dr Suzanne Aussems</b> <br> Assistant Professor <br> Department of
-Psychology <br> University of Warwick <!--<br>
-Room H1.20
-<br>
-Drop-in Thursdays 3-4pm
-<br>
-&#9742; +44 (0)24 765X XXXX--> <br> ✉ <a
+<div>
+<div class="section-title">
+Biography
+</div>
+<p>Dr Suzanne Aussems is an Associate Professor in Psychology at the
+University of Warwick (since July 2025), having previously served as an
+Assistant Professor there from July 2020. She earned her BA (2007–2010)
+and MA (2010–2012) degrees in Culture Studies from Tilburg University,
+followed by a joint MPhil in Language and Communication (2012–2014) from
+Tilburg University and Radboud University Nijmegen in the
+Netherlands.</p>
+<p>She completed her PhD in Psychology at the University of Warwick
+(2014–2017) and subsequently held two postdoctoral fellowships at
+Warwick (2017–2019). She then worked as a postdoctoral researcher in
+developmental psychology at Royal Holloway, University of London
+(2019–2020).</p>
+<div class="contact-box">
+<div class="section-title" style="margin-top:0; font-size:26px;">
+Contact
+</div>
+<p><b>Dr Suzanne Aussems</b><br> Associate Professor<br> Department of
+Psychology<br> University of Warwick<br> ✉ <a
 href="mailto:s.aussems.1@warwick.ac.uk"
 class="email">s.aussems.1@warwick.ac.uk</a></p>
+</div>
+</div>
 </div>
 
 
